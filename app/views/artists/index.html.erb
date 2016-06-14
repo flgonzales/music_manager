@@ -18,7 +18,7 @@
       <tr>
         <td><%= artist.id %></td>
         <td><%= artist.name %></td>
-        <td><%= artist.avatar %></td>
+        <td><img class="small-cover" src=<%= artist.avatar %>></td>
         <td><%= artist.last_update %></td>
         <td><%= link_to 'Show', artist %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
