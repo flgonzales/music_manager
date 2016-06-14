@@ -5,8 +5,56 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Artist.create(name:"Pata de Elefante", avatar:"https://i.ytimg.com/vi/zk45oKmi8EQ/hqdefault.jpg")
-Artist.create(name:"Laranja Freak", avatar:"https://i.ytimg.com/vi/cYvhNWcvfmg/maxresdefault.jpg")
-Artist.create(name:"Os Mutantes", avatar:"http://rollingstone.uol.com.br/media/images/original/2014/07/04/img-1024319-os-mutantes.jpg")
-Artist.create(name:"Gilberto Gil", avatar:"http://img.photobucket.com/albums/v627/Flabbergast/1.png")
-Artist.create(name:"Tim Maia", avatar:"http://www.luakabop.com/photobio/tim-maia/nobody-can-live-forever-tim-maia.jpg")
+pata = Artist.create(name:"Pata de Elefante", avatar:"https://i.ytimg.com/vi/zk45oKmi8EQ/hqdefault.jpg")
+laranja = Artist.create(name:"Laranja Freak", avatar:"https://i.ytimg.com/vi/cYvhNWcvfmg/maxresdefault.jpg")
+mutante = Artist.create(name:"Os Mutantes", avatar:"http://rollingstone.uol.com.br/media/images/original/2014/07/04/img-1024319-os-mutantes.jpg")
+gil = Artist.create(name:"Gilberto Gil", avatar:"http://img.photobucket.com/albums/v627/Flabbergast/1.png")
+tim = Artist.create(name:"Tim Maia", avatar:"http://www.luakabop.com/photobio/tim-maia/nobody-can-live-forever-tim-maia.jpg")
+
+Song.create(name:"Hey!", lyrics:"Hey!", artist_id: pata.id )
+Song.create(name:"Alérgico a Flores", lyrics:"A primavera chegou (a prima Ana também)
+O polem saiu da flor (e a prima Ana também)
+E o perfume no ar (e a prima Ana)
+
+Anunciando que o inverno passou
+Brota flor, e também brota o amor
+Anunciando que o inverno passou
+Brota flor, e também brota o amor
+
+A prima ana já vem (e a primavera também)
+Com um sorriso no olhar (e a primavera também)
+O olhar se cruzou (e a primavera)
+
+O anjo cupido flechou
+Brota flor, e também brota o amor
+O anjo cupido flechou
+Brota flor, e também brota o amor
+
+Vamos deitar na grama
+Da grama fazer de cama
+Só tenha pena de mim
+Não role perto do jardim
+
+Pois sou alérgico a flores
+Sou alérgico a flores
+
+Vamos deitar na grama
+Da grama fazer de cama
+Só tenha pena de mim
+Não role perto do jasmim
+
+Pois sou
+Sou alérgico a flores
+
+Vamos deitar na grama
+Da grama fazer de cama
+Só tenha pena de mim
+Não role perto do jardim
+
+Pois sou alérgico a flores
+Sou alérgico a flores
+
+Sou alérgico a flores (e a prima Ana também)
+Sou alérgico a flores (e a primavera também)
+Sou alérgico a flores (e a prima Ana também)
+Sou alérgico a flores (e a primavera também)", artist_id: laranja.id)
