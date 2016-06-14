@@ -18,11 +18,21 @@
   <div class="field">
     <%= f.label :lyrics %><br>
     <%= f.text_area :lyrics %>
+
+  <div class="form-group">
+    <%=f.label :artists, :class => "control-label"%>
+    <div>
+      <% artists = Artist.all.map{|t| [t.name, t.id]}.sort %>
+      <%= f.select :artist_id, artists, {class: "form-control", prompt: true}, {multiple: false, size: 10} %>
+      
+    </div>
   </div>
+  <!--</div>
   <div class="field">
     <%= f.label :artist_id %><br>
     <%= f.text_field :artist_id %>
-  </div>
+  </div>-->
+
   <div class="actions">
     <%= f.submit %>
   </div>
