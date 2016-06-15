@@ -16,16 +16,21 @@
   <img class="cover" src=<%= @artist.avatar %>>
 </p>
 
-<h2>Songs</h2>
+<h2>Songs <%= link_to "New Song", new_song_path( artist_id: @artist.id), class: "btn btn-default", style: "float: right"%></h2>
+
 <% songs = @artist.songs.sort_by { |song| song.name} %>
 
+<% render songs %>
+<!--
 <% render songs, hide_artist: true %>
-
+-->
 <!--
 <p>
   <strong>Last update:</strong>
   <%= @artist.last_update %>
 </p>
 -->
+<div>
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
+</div>
