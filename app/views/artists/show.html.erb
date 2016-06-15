@@ -6,20 +6,26 @@
 </p>
 -->
 
-<p>
+<h1>
   <strong><%= @artist.name %></strong>
 
-</p>
+</h1>
 
 <p>
   <!-- Artist image at original size -->
   <img class="cover" src=<%= @artist.avatar %>>
 </p>
 
+<h2>Songs</h2>
+<% songs = @artist.songs.sort_by { |song| song.name} %>
+
+<% render songs, hide_artist: true %>
+
+<!--
 <p>
   <strong>Last update:</strong>
   <%= @artist.last_update %>
 </p>
-
+-->
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

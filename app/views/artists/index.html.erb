@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Artists</h1>
+<h1>Artists</h1>
 
 <% @artists.each do |artist| %>
-  <p><%= link_to artist.name, artist %></p>
-  <p><img class="small-cover" src=<%=artist.avatar %></p>
-  <p><%= link_to artist.last_update %></p>
+  <h2><%= link_to artist.name, artist %></h2>
+  <div>
+    <img class="small-cover" src=<%= artist.avatar %>
+  </div>
+<!--  <p><%= link_to artist.last_update  %></p> -->
 <% end %>
 
 <!--

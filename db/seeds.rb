@@ -12,6 +12,13 @@ gil = Artist.create(name:"Gilberto Gil", avatar:"http://img.photobucket.com/albu
 tim = Artist.create(name:"Tim Maia", avatar:"http://www.luakabop.com/photobio/tim-maia/nobody-can-live-forever-tim-maia.jpg")
 
 Song.create(name:"Hey!", lyrics:"Hey!", artist_id: pata.id )
+Song.create(name:"Expresso 2222", lyrics: "Expresso 2222 para a Central do Brasil", artist_id: gil.id)
+Song.create(name: "Do Leme ao Pontal", lyrics: "Que beleza! Maravilha!
+Quem não dança segura a criança!", artist_id: tim.id)
+Song.create(name: "A Minha Menina", lyrics: "Ela é minha menina
+E eu sou o menino dela
+Ela é o meu amor
+E eu sou o amor todinho dela", artist_id: mutante.id)
 Song.create(name:"Alérgico a Flores", lyrics:"A primavera chegou (a prima Ana também)
 O polem saiu da flor (e a prima Ana também)
 E o perfume no ar (e a prima Ana)
