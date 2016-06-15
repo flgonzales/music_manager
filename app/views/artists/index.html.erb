@@ -2,6 +2,13 @@
 
 <h1>Listing Artists</h1>
 
+<% @artists.each do |artist| %>
+  <p><%= link_to artist.name, artist %></p>
+  <p><img class="small-cover" src=<%=artist.avatar %></p>
+  <p><%= link_to artist.last_update %></p>
+<% end %>
+
+<!--
 <table>
   <thead>
     <tr>
@@ -27,7 +34,7 @@
     <% end %>
   </tbody>
 </table>
-
+-->
 <br>
 
 <%= link_to 'New Artist', new_artist_path %>
