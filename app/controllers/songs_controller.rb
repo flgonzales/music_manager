@@ -4,21 +4,25 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+  #  @songs = Song.all
+    @songs = Song.order(name: :asc)
   end
 
   # GET /songs/1
   # GET /songs/1.json
   def show
+    @song = Song.find(params[:id])
   end
 
   # GET /songs/new
   def new
     @song = Song.new
+    @song.artist_id = params[:artist_id]
   end
 
   # GET /songs/1/edit
   def edit
+    @song = Song.find(params[:id])
   end
 
   # POST /songs

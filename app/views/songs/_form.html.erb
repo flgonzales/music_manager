@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :artist_id, :value => @song.artist.id%>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -24,16 +26,10 @@
     <div>
       <% artists = Artist.all.map{|t| [t.name, t.id]}.sort %>
       <%= f.select :artist_id, artists, {class: "form-control", prompt: true}, {multiple: false, size: 10} %>
-      
+
     </div>
   </div>
-  <!--</div>
-  <div class="field">
-    <%= f.label :artist_id %><br>
-    <%= f.text_field :artist_id %>
-  </div>-->
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit (@song.new_record? ? "Create" : "Update"), class: "form-control btn-primary" %>
+
 <% end %>

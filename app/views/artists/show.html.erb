@@ -1,24 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <strong>Id:</strong>
   <%= @artist.id %>
 </p>
+-->
+
+<h1>
+  <strong><%= @artist.name %></strong>
+  <%= link_to "Edit", edit_artist_path(@artist), class: "btn btn-default", style: "float: right" %>
+  <%= link_to "Delete", artist_path(@artist) , method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-default", style:"float: right" %>
+</h1>
 
 <p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
-
-<p>
-  <strong>Avatar:</strong>
+  <!-- Artist image at original size -->
   <img class="cover" src=<%= @artist.avatar %>>
 </p>
 
+<h2>Songs <%= link_to "New Song", new_song_path( artist_id: @artist.id), class: "btn btn-default", style: "float: right"%></h2>
+
+<% songs = @artist.songs.sort_by { |song| song.name} %>
+
+<% render songs %>
+<!--
+<% render songs, hide_artist: true %>
+-->
+<!--
 <p>
   <strong>Last update:</strong>
   <%= @artist.last_update %>
 </p>
-
+-->
+<div>
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
+</div>

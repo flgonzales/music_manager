@@ -1,0 +1,15 @@
+<div class="song-item">
+
+
+
+  <div class="inline details">
+
+    <h3><%= link_to song.name, song %></h3>
+
+    <% if !defined?(hide_artist) || !hide_artist %>
+      <h4><%= link_to song.artist.name, song.artist %></h4>
+    <% end %>
+
+    <p><%= simple_format truncate(song.lyrics, length:60) %></p>
+  </div>
+</div>

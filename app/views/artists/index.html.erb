@@ -1,7 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Artists</h1>
+<h1>Artists <% link_to "New Artist", new_artist_path, class: "btn btn-default", style: "float: right"%> </h1>
 
+<% @artists.each do |artist| %>
+  <h2><%= link_to artist.name, artist %></h2>
+  <div>
+    <img class="small-cover" src=<%= artist.avatar %>
+  </div>
+<!--  <p><%= link_to artist.last_update  %></p> -->
+<% end %>
+
+<!--
 <table>
   <thead>
     <tr>
@@ -27,7 +36,7 @@
     <% end %>
   </tbody>
 </table>
-
+-->
 <br>
 
 <%= link_to 'New Artist', new_artist_path %>
